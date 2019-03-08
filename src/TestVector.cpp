@@ -3,6 +3,7 @@
 //
 //There are 4 ways of traversing vector
 #include "TestVector.h"
+#include <deque>
 void TestVector::test_vector_traverse() {
     std::vector <int> list;
 
@@ -34,6 +35,7 @@ void TestVector::test_vector_traverse() {
         std::cout << *i << " ";
     }
     std::cout << std::endl;
+
 }
 
 void TestVector::test_vector_main(){

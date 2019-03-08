@@ -9,10 +9,9 @@
 #include <vector>
 
 class TestVector {
-public:
-    TestVector(){};
-    void test_vector_traverse();
-    void test_vector_main();
+    public:
+        void test_vector_traverse();
+        void test_vector_main();
 };
 
 

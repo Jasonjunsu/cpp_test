@@ -8,7 +8,6 @@
 
 class TestAuto {
     public:
-        TestAuto(){}
         void test_auto_main();
 };
 
