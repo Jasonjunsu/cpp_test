@@ -5,6 +5,7 @@
 #include "TestIO.h"
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 
 void TestIO::test_ofstream(){
@@ -39,7 +40,7 @@ void TestIO::test_ifstream() {
     f1.close();
 }
 
-void TestIO::test_binary_file(){
+void TestIO::test_write_binary_file(){
     std::ofstream f1;
     f1.open("/home/jason/ret", std::ios::out|std::ios::binary);
     int arr1[3] = {4, 5, 6};
@@ -51,8 +52,24 @@ void TestIO::test_binary_file(){
     f1.close();
 }
 
+void TestIO::test_read_binary_file(){
+    std::ifstream bf;
+    int myData[3];
+
+    bf.open("/home/jason/ret", std::ios::binary);
+
+    if (bf.is_open()) {
+        bf.read(reinterpret_cast<char*>(myData), sizeof(int) *3);
+    }
+    for(int i : myData){
+        std::cout << i << std::endl;
+    }
+    bf.close();
+}
+
 void TestIO::test_io_main() {
 //    test_ofstream();
 //    test_ifstream();
-    test_binary_file();
+    test_write_binary_file();
+    test_read_binary_file();
 }

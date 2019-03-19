@@ -11,7 +11,8 @@ public:
     void test_io_main();
     void test_ofstream();
     void test_ifstream();
-    void test_binary_file();
+    void test_write_binary_file();
+    void test_read_binary_file();
 };
 
 
